@@ -1,0 +1,155 @@
+* {
+  margin: 0; /*varsayılan dış boşlukları sıfırlar.*/
+  padding: 0; /*varsayılan iç boşlukları sıfırlar.*/
+  font-family: "Lisu Bosa", serif;
+  font-family: "Poppins", sans-serif;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column; /* Yatay sıralamayı düzelten satır */
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(4, 9, 30, 0.168),
+      rgba(4, 9, 30, 0.137)
+    ),
+    url(img/p1.jpg);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  /* background-image: url(img/a2.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-section {
+  width: 30%; /* İstenilen genişlik ayarı */
+  text-align: right;
+  text-align: center;
+}
+.container .card {
+  /* max-width: 200px; */
+  width: 308px;
+  position: relative;
+  height: 400px;
+  background: #f0f0f0;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.5px 10px #e6e6e6;
+  transition: 0.3s ease-in-out;
+  margin-top: 5%;
+}
+
+.container .card .imgBx {
+  position: relative;
+  width: 260px; /* Resim konteynerini kartın genişliği kadar yapar 100%*/
+  height: 260px;
+  top: -60px;
+  left: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 1.2);
+}
+
+.container .card .imgBx img {
+  max-width: 100%;
+  width: 100%; /*bu benim resimleri containera koymamı sağladı*/
+  height: 100%; /*bu benim resimleri containera koymamı sağladı*/
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.imgBx:hover img {
+  transform: scale(1.1);
+}
+
+.nav {
+  background-color: #232323;
+  padding: 15px;
+  text-align: center;
+  width: 100%; /* Eklenen satır: navbar'ın genişliğini %100 yapar */
+  position: fixed; /* Eklenen satır: sabit pozisyonlu */
+  top: 100; /* Eklenen satır: sayfanın üstünde */
+  z-index: 1000; /* Eklenen satır: diğer öğelerden üstte */
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none; /* Liste işaretini kaldırır, genellikle özel bir simge veya stil kullanılacaksa kullanılır */
+  display: inline-block; /* Elemanları yatayda sıralamak için kullanılır, blok eleman gibi davranır ancak yatayda yan yana gelir */
+  padding: 8px 12px; /* Üst ve alt kenar boşluğu 8 birim, sağ ve sol kenar boşluğu 12 birim içerir */
+  position: relative; /* Pozisyonunu ayarlamak için kullanılır, bu durumda alt elemanlarda kullanılabilir */
+}
+
+.nav-links ul li a {
+  color: #d0b2afd8;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-links ul li::after /*bağlantının altın ek bir öge ekler*/ {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: flex;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.card i {
+  position: relative;
+  bottom: -30px;
+  color: rgb(108, 92, 7);
+  font-size: 24px;
+}
+
+.konum-etiketi {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #b38080;
+  padding: 5px;
+  border: 1px solid #b87d7d;
+  border-radius: 5px;
+  z-index: 1;
+}
